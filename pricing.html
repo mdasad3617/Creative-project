@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Page</title>
+<link rel="stylesheet" href="c:\Users\Mohd Subhan\Desktop\create\style.css">
+<script defer src="c:\Users\Mohd Subhan\Desktop\create\script.js"></script>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        position: relative;
+        height: 2000px;
+        background-color: black;
+    }
+
+    .hero-section {
+        background-image: url("pricingimg.jpg");
+        height: 650px;
+    }
+
+    .hero-section h1 {
+        margin-left: -70%;
+    }
+
+    .hero-section h2 {
+        margin-left: -80%;
+        padding-top: 10%;
+    }
+
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+        height: 720px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card-body {
+        background-color:rgb(43, 184, 189);
+    }
+
+    .card-text {
+        color: white;
+        font-size: 20px;
+        font-style: italic;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .card-head {
+        color: white;
+        padding-top: 5%;
+    }
+
+    .footer {
+        background-color: black;
+        padding: 40px 0;
+    }
+
+    .footer .btn-outline-success {
+        margin-bottom: 20px;
+    }
+
+    .footer .social-media img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .footertext {
+        text-align: justify;
+        text-justify: inter-word;
+        color: white;
+    }
+
+    @media (max-width: 767px) {
+        .header {
+            padding: 15px;
+        }
+
+        .hero-section h1 {
+            font-size: 40px;
+        text-align: justify;
+        text-justify: inter-word;
+        }
+
+        .hero-section h2 {
+            font-size: 28px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .card {
+            width: 95%;
+        }
+
+        .footer .social-media img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+</style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container-xl">
+            <!-- Logo -->
+            <a class="navbar-brand" href="file:///C:/Users/Mohd%20Subhan/Desktop/create/index.html#">
+                <img src="c:\Users\Mohd Subhan\Desktop\create\logo.png" alt="logo" height="40">
+            </a>
+            <!-- Navbar toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <!-- Nav -->
+                <div class="navbar-nav mx-lg-auto">
+                <a class="nav-item nav-link" href="file:///C:/Users/Mohd%20Subhan/Desktop/create/aboutus/AboutUs.html">About Us</a>
+                <a class="nav-item nav-link" href="file:///C:/Users/Mohd%20Subhan/Desktop/create/pricing/pricing.html">Pricing</a>
+                <a class="nav-item nav-link" href="http://localhost:3000/">Create Script</a>
+                <a class="nav-item nav-link" href="file:///C:/Users/Mohd%20Subhan/Desktop/create/blog/Blog.html">Blog</a>
+                </div>
+                <!-- Add Login and Signup buttons -->
+                <ul class="nav-item navbar-nav ms-lg-4">
+                    <a class="nav-link btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        </header>
+
+    <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button> 
+                    <hr>
+                    <button type="submit" class=" d-flex justify-content-center btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+                    <hr>
+                    <p>Or loginup using:</p>
+                    <div class="d-flex justify-content-center">
+                        <!-- Add your social media links/icons here -->
+                        <a href="#" class="me-3"><img src="fblogo.jpg" alt="Facebook" height="30px" width="30px"></a>
+                        <a href="#" class="me-3"><img src="twitlogo.jpg" alt="Twitter" height="30px" width="30px"></a>
+                        <a href="#" class="me-3"><img src="instalogo.jpg" alt="Instagram" height="30px" width="30px"></a>
+                    </div>
+                </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Signup Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="signupModalLabel">Signup</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                    <label for="newUsername" class="form-label">Username:</label>
+                    <input type="text" class="form-control" id="newUsername" required>
+                    </div>
+                    <div class="mb-3">
+                    <label for="newPassword" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="newPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Signup</button>
+                    <hr>
+                    <p>Or signup using:</p>
+                    <div class="d-flex justify-content-center">
+                        <!-- Add your social media links/icons here -->
+                        <a href="#" class="me-3"><img src="fblogo.jpg" alt="Facebook" height="30px" width="30px"></a>
+                        <a href="#" class="me-3"><img src="twitlogo.jpg" alt="Twitter" height="30px" width="30px"></a>
+                        <a href="#" class="me-3"><img src="instalogo.jpg" alt="Instagram" height="30px" width="30px"></a>
+                    </div>
+                </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+<!---image-1-->
+<div class="hero-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h2>Plans and Pricing</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+<h1 class="text-center mb-5 text-white">Pricing Plans</h1>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="three-months-tab" data-bs-toggle="tab" data-bs-target="#three-months" type="button" role="tab" aria-controls="three-months" aria-selected="true">3 Months</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="yearly-tab" data-bs-toggle="tab" data-bs-target="#yearly" type="button" role="tab" aria-controls="yearly" aria-selected="false">Yearly</button>
+    </li>
+</ul>
+<div class="tab-content mt-3" id="myTabContent">
+    <!-- Three Months Plan -->
+    <div class="tab-pane fade show active" id="three-months" role="tabpanel" aria-labelledby="three-months-tab">
+        <div class="row">
+            <!-- Plan 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Basic Plan</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$9.99 <small class="text-muted">/ month</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Plan 2 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Standard Plan</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$19.99 <small class="text-muted">/ month</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                            <li>Feature 4</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Plan 3 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Premium Plan</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$29.99 <small class="text-muted">/ month</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                            <li>Feature 4</li>
+                            <li>Feature 5</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Yearly Plan -->
+    <div class="tab-pane fade" id="yearly" role="tabpanel" aria-labelledby="yearly-tab">
+        <div class="row">
+            <!-- Yearly Plan Card 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Yearly Basic Plan</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$99.99 <small class="text-muted">/ year</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Yearly Plan Card 2 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Yearly Standard Plan</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$199.99 <small class="text-muted">/ year</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                            <li>Feature 4</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Yearly Plan Card 3 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Yearly Premium Plan</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$299.99 <small class="text-muted">/ year</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                            <li>Feature 4</li>
+                            <li>Feature 5</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

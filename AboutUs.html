@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="c:\Users\Mohd Subhan\Desktop\create\style.css">
+    <script defer src="c:\Users\Mohd Subhan\Desktop\create\script.js"></script>
+
+    <style>
+    body {
+            position: relative;
+            height: 2000px;
+            background-color: black;
+        }
+
+        .hero-section {
+            background-image: url("aboutusimg.jpg");
+            height: 650px;
+        }
+
+        .hero-section h1 {
+            margin-left: -70%;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .hero-section h2 {
+            margin-left: -80%;
+            padding-top: 10%;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .card {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -5%;
+            width: 50%;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            background-color: #333;
+        }
+
+        .card-text {
+            color: white;
+            font-size: 20px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .card-head {
+            color: white;
+            padding-top: 5%;
+        }
+
+        .footer {
+            background-color: black;
+            padding: 40px 0;
+        }
+
+        .footer .btn-outline-success {
+            margin-bottom: 20px;
+        }
+
+        .footer .social-media img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .footertext {
+            color: white;
+        }
+
+        @media (max-width: 767px) {
+            .header {
+                padding: 15px;
+            }
+
+            .hero-section h1 {
+                font-size: 40px;
+            }
+
+            .hero-section h2 {
+                font-size: 28px;
+            }
+
+            .card {
+                width: 95%;
+            }
+
+            .footer .social-media img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+
+    <title>About Us</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container-xl">
+            <!-- Logo -->
+            <a class="navbar-brand" href="file:///C:/Users/Mohd%20Subhan/Desktop/create/index.html#">
+                <img src="c:\Users\Mohd Subhan\Desktop\create\logo.png" alt="logo" height="40">
+            </a>
+            <!-- Navbar toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <!-- Nav -->
+                <div class="navbar-nav mx-lg-auto">
+                <a class="nav-item nav-link" href="file:///C:/Users/Mohd%20Subhan/Desktop/create/aboutus/AboutUs.html">About Us</a>
+                <a class="nav-item nav-link" href="file:///C:/Users/Mohd%20Subhan/Desktop/create/pricing/pricing.html">Pricing</a>
+                <a class="nav-item nav-link" href="http://localhost:3000/">Create Script</a>
+                <a class="nav-item nav-link" href="file:///C:/Users/Mohd%20Subhan/Desktop/create/blog/Blog.html">Blog</a>
+                </div>
+                <!-- Add Login and Signup buttons -->
+                <ul class="nav-item navbar-nav ms-lg-4">
+                    <a class="nav-link btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        </header>
+
+    <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button> 
+                    <hr>
+                    <button type="submit" class=" d-flex justify-content-center btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+                    <hr>
+                    <p>Or loginup using:</p>
+                    <div class="d-flex justify-content-center">
+                        <!-- Add your social media links/icons here -->
+                        <a href="#" class="me-3"><img src="fblogo.jpg" alt="Facebook" height="30px" width="30px"></a>
+                        <a href="#" class="me-3"><img src="twitlogo.jpg" alt="Twitter" height="30px" width="30px"></a>
+                        <a href="#" class="me-3"><img src="instalogo.jpg" alt="Instagram" height="30px" width="30px"></a>
+                    </div>
+                </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Signup Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="signupModalLabel">Signup</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                    <label for="newUsername" class="form-label">Username:</label>
+                    <input type="text" class="form-control" id="newUsername" required>
+                    </div>
+                    <div class="mb-3">
+                    <label for="newPassword" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="newPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Signup</button>
+                    <hr>
+                    <p>Or signup using:</p>
+                    <div class="d-flex justify-content-center">
+                        <!-- Add your social media links/icons here -->
+                        <a href="#" class="me-3"><img src="fblogo.jpg" alt="Facebook" height="30px" width="30px"></a>
+                        <a href="#" class="me-3"><img src="twitlogo.jpg" alt="Twitter" height="30px" width="30px"></a>
+                        <a href="#" class="me-3"><img src="instalogo.jpg" alt="Instagram" height="30px" width="30px"></a>
+                    </div>
+                </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <!---image-1-->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1>CREATIVE</h1>
+                    <h2>About Us</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------card------------->
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-head text-center">About Us</h1>
+            <br>
+            <h3 class="card-head text-center">Our Mission</h3>
+            <p class="card-text">Welcome to NolanAi, the AI-driven scriptwriting software for screenwriters at any
+                level.
+                Our mission is to guide and empower you in crafting captivating screenplays while preserving your unique
+                voice.</p>
+            <h3 class="card-head mb-2 text-center">What is NolanAi?</h3>
+            <p class="card-text">NolanAi is the ultimate AI-driven scriptwriting software that can help screenwriters of
+                all
+                levels. It's designed to guide and assist you in bringing your stories to the screenplay industry
+                format,
+                without stealing your creativity.</p>
+            <p class="card-text">If you're new to the industry, NolanAi can be your co-pilot, helping you through the
+                emotional
+                and exhausting process of screenwriting.</p>
+            <p class="card-text">With its powerful algorithms and intuitive interface, it can offer suggestions and
+                guidance
+                on character development, plot points, and dialogue, helping you turn your ideas into polished
+                screenplays.</p>
+            <p class="card-text">For experienced scriptwriters, NolanAi can bring new ideas and inspiration to your
+                writing. It
+                can suggest fresh angles, plot twists, and character arcs, helping you take your craft to the next level.
+                And
+                throughout the writing process, you're always in control.</p>
+            <p class="card-text">NolanAi is here to help, not to take over.</p>
+
+            <h3 class="card-head text-center">Control and Creativity</h3>
+            <p class="card-text">We believe in empowering screenwriters, not taking over. With NolanAi, you're always in
+                control. Our AI-powered features seamlessly integrate into your workflow, providing intelligent
+                suggestions and
+                streamlining your creative process. Our user-friendly interface allows you to effortlessly shape and
+                refine
+                your scripts, bringing your stories to life efficiently and effectively.</p>
+
+            <h4 class="card-head text-center">Experience the transformative impact of NolanAi and unleash your screenwriting
+                potential today.</h4>
+            <br><br><br>
+            <p class="card-text text-center">Drop us an email: <a href="mailto:hello@nolanai.app">hello@nolanai.app</a>
+            </p>
+            <p class="card-text text-center">For support: <a href="mailto:support@nolanai.app">support@nolanai.app</a>
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <a href="http://localhost:3000/" class="btn btn-outline-success btn-lg">Start Writing</a>
+            <br><br>
+            <ul class="list-inline social-media">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com"><img src="fblogo.jpg" alt="Facebook"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.twitter.com"><img src="twitlogo.jpg" alt="Twitter"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com"><img src="instalogo.jpg" alt="Instagram"></a>
+                </li>
+            </ul>
+            <p class="footertext">&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
